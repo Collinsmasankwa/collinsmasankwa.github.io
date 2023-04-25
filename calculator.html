@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="HTML">
+        <!--<meta http-equiv="refresh" content="3; url='www.google.com'">-->
+        <link rel="stylesheet" href="calculator.css">
+        <title>Calculator Application</title>
+    </head>
+    <body>
+        <header>
+            <div class="flex-container">
+                <div>
+                    <h1 style="color: red;">calculator Application</h1>
+                </div>
+                <div>
+                    <span style="font-size: 22px;">Choose <strong>mode</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="on">DARK</label>
+                    <input type="radio" id="on" name="on/off" onclick="on()">
+                    <label for="off">LIGHT</label>
+                    <input type="radio" id="off" name="on/off" onclick="off()">
+                </div>
+            </div>
+        </header>
+        <main>
+            <h3>Welcome to our Calculator app. Feel free to do any calculations
+                you wish with our easy UI app!</h3>
+            <p style="font-size: 18px;">To change the background-color of the app, press <q>bg</q>on the app</p>
+            <p style="font-size: 18px;">Press <q>ON</q> to use the calculator!</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="div" id="div">
+                <form>
+                    <div class="screen">
+                        <input type="text" name="screen" class="screen" readonly id="screen" value="0" style="display: none;">
+                    </div>
+                    <div class="grid-container">
+                        <div class="item1"><input type="button" class="btn" id="1" value="1" onclick="screen.value += '1' "></div>
+                        <div class="item2"><input type="button" class="btn" id="2" value="2" onclick="screen.value += '2' "></div>
+                        <div class="item3"><input type="button" class="btn" id="3" value="3" onclick="screen.value += '3' "></div>
+                        <div class="item4"><input type="button" class="btn" id="4" value="4" onclick="screen.value += '4' "></div>
+                        <div class="item5"><input type="button" class="btn" id="5" value="5" onclick="screen.value += '5' "></div>
+                        <div class="item6"><input type="button" class="btn" id="6" value="6" onclick="screen.value += '6' "></div>
+                        <div class="item7"><input type="button" class="btn" id="7" value="7" onclick="screen.value += '7' "></div>
+                        <div class="item8"><input type="button" class="btn" id="8" value="8" onclick="screen.value += '8' "></div>
+                        <div class="item9"><input type="button" class="btn" id="9" value="9" onclick="screen.value += '9' "></div>
+                        <div class="item0"><input type="button" class="btn" id="0" value="0" onclick="screen.value += '0' "></div>
+                        <div class="item+"><input type="button" class="btn" id="+" value="+" onclick="screen.value += '+' "></div>
+                        <div class="item-"><input type="button" class="btn" id="-" value="-" onclick="screen.value += '-' "></div>
+                        <div class="item*"><input type="button" class="btn" id="*" value="*" onclick="screen.value += '*' "></div>
+                        <div class="item/"><input type="button" class="btn" id="/" value="/" onclick="screen.value += '/' "></div>
+                        <div class="item="><input type="button" class="btn" id="=" value="=" onclick="screen.value = eval(screen.value) "></div>
+                        <div class="item-clear"><input type="button" class="btn" id="del" value="DEL" onclick="screen.value = screen.value.toString().slice(0, -1) "></div>
+                        <div class="item-bg"><input type="button" class="btn" onclick="changeBg()" value="bg"></div>
+                        <div class="item-ac"><input type="button" class="btn" value="AC" onclick="screen.value = '' "></div>
+                        <div class="item-on"><input type="button" class="btn" value="ON" onclick="ON(); screen.value = '0' "></div>
+                        <div class="item-off"><input type="button" class="btn" value="OFF" onclick="OFF()"></div>
+                        <div class="item-dot"><input type="button" class="btn" value="." onclick="screen.value += '.' "></div>
+                        <div class="item-%"><input type="button" class="btn" value="%" onclick="screen.value += '%' "></div>
+                        <div class="item-e"><input type="button" class="btn" value="e" onclick="screen.value += 'e' "></div>
+                        <div class="item-00"><input type="button" class="btn" value="00" onclick="screen.value += '00' "></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <p style="text-align: center; margin-top: -200px; font-size: 22px;">&copy;Collins Masankwa</p>
+
+        </footer>
+        <script src="calculator.js"></script>
+    </body>
+</html>
