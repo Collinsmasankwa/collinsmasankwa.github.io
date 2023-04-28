@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="HTML">
+        <!--<meta http-equiv="refresh" content="3; url='www.google.com'">-->
+        <link rel="stylesheet" href="timer.css">
+        <title>Timer Application</title>
+    </head>
+    <body>
+        <header>
+            <h1>TIMER</h1>
+        </header>
+        <main>
+            <div class="flex-container">
+                <div class="container" onclick="start()">
+                    <div style="position: relative; left: 50%; top: 50%; transform: translate(-50%,-50%);">
+                        <p id="time" style="font-size: 45px;">0</p>
+                        <p id="p"><strong>seconds</strong></p>
+                    </div>
+                </div>
+            </div><br><br>
+            <div class="flex-container">
+                <button class="btn" style="background-color: green;" onclick="start()">Start</button>
+                <button class="btn" style="background-color: red;" onclick="stop()">Stop</button>
+                <button class="btn" style="background-color: orange;" onclick="reset()">Reset</button>
+            </div>
+
+
+        </main><br><br>
+        <footer>
+            <p style="text-align: center; font-size: 22px;">&copy;Collins Masankwa</p>
+
+        </footer>
+        <script src="timer.js"></script>
+    </body>
+</html>
