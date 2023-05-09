@@ -1,0 +1,56 @@
+.toggle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input[type*='checkbox']{
+    visibility: hidden;
+}
+.toggle input + label{
+    font-size: 40px;
+}
+.toggle input + label::before {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    content: '';
+    width: 60px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+    padding: 4px;
+}
+.toggle input + label::after{
+    position: absolute;
+    top: 50%;
+    right: 300%;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+    padding: 4px;
+    transition: background-color 1s .2s ease-in;
+}
+.toggle input:checked + label::after{
+    position: absolute;
+    top: 50%;
+    right: 87%;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: rgba(0, 200, 0, 0.9);
+    padding: 4px;
+    transition: background-color 1s .2s ease-in;
+}
+.toggle input:checked + label::before{
+    background-color: rgba(0, 200, 0, 0.6);
+}
+.light{
+    background: white;
+}
