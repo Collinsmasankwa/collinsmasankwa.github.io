@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="Responsive Webportfolio">
+        <link rel="stylesheet" href="webportfolio.css">
+        <link rel="icon" type="image/x-icon" href="logo.jpg">
+        <title>Collins Webportfolio</title>
+    </head>
+    <body>
+        <header>
+            <div class="clearfix">
+                <nav>
+                    <div class="nav">
+                        <ul>
+                            <li class="hide"><a><img src="menu.png" alt="menu" style="width: 40px;
+                             height: 30px;"></a>
+                                <ul>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="top">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#my_projects">My Projects</a></li>
+                            <li><a href="#contact" class="small_screen_hide">Contact</a></li>
+                            <li><a href="#" class="small_screen_hide">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+        </header><br>
+        <main>
+            <div>
+                <p><strong>Hello world!!!</strong></p><br>
+                <p><strong>ABOUT</strong></p>
+                <p id="about"><strong>Hi!&nbsp;</strong>My name is Collins Mokua and am a full-stack
+                    software engineer as well as a Physiotherapist.<br>
+                Am passionate about programming and solving different problems daily.
+                    <br>I have vast skills in the following:
+                </p><br>
+                <ul style="list-style: disc; padding: 10px; margin-left: 30px;">
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                    <li>PYTHON</li>
+                    <li>DJANGO WEB FRAMEWORK</li>
+                </ul><br>
+                <p>Welcome to my webpage...
+                    <br>
+                </p>
+            </div><br>
+            <div>
+                <p id="my_projects"><strong>MY PROJECTS</strong></p>
+                <p>The following are some of the projects I've completed.</p>
+                <ol style="padding: 10px; margin-left: 30px;">
+                    <li>
+                        <dl>
+                            <dt>Digital Calculator</dt>
+                            <dd>Its a responsive calculator with features such as changing background<br>of
+                                 the calculator based on the user's preference.<br>
+                            <a href="https://collinsmasankwa.github.io/calculator">Calculator</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Digital Clock</dt>
+                            <dd>This is a fully functional digital clock.
+                            Below is a link to it:<br>
+                            <a href="https://collinsmasankwa.github.io/clock">Digital Clock</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt>Counter</dt>
+                            <dd>This works just the same way as any counter
+                                with functionalities such as start, stop and reset.<br>
+                            <a href="https://collinsmasankwa.github.io/counter">Counter</a></dd>
+                        </dl>
+                    </li>
+                    <li>I've also developed an Instagram clone using django.Unfortunately, it's not yet released.</li>
+                </ol>
+            </div>
+            <div>
+                <h3>CONTACT</h3>
+                <p>For more questions, you can send to me an email below:</p>
+                <a href="mailto:collinsmasankwa@gmail.com" id="contact">Email</a><br><br>
+                <p>To subscribe to newsletters, fill the form below:</p><br>
+                <form style="padding: 15px;">
+                    <fieldset>
+                        <legend><strong>For updates...</strong></legend>
+                        <label for="name">Name</label>
+                        <input type="text" id="name"><br>
+                        <label for="email">Email</label>
+                        <input type="email" id="email"><br>
+                        <input type="button" class="btn" value="Subscribe">
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <a style="cursor: pointer; color: yellow;" href="#top"><strong>Back to the top&uparrow;</strong></a>
+            <p style="text-align: center;">&copy;Collins Mokua 2023</p>
+
+        </footer>
+        <script src="webportfolio.js"></script>
+    </body>
+</html>

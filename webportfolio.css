@@ -1,0 +1,84 @@
+*   {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+
+}
+.right  {
+    float: right;
+}
+.nav ul li  {
+    float: left;
+}
+.nav ul li  a{
+    display: block;
+    text-decoration: none;
+    font-size: 22px;
+    color: blue;
+    padding: 10px;
+    text-align: center;
+}
+.clearfix   {
+    content: '';
+    clear: both;
+    display: table;
+}
+.nav ul li a:hover  {
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+}
+@media  screen and (min-width: 768px){
+    /* hide class will be used for small screens... For larger screens we disable this*/
+    .hide ul li   {
+        display: none;
+    }
+    .nav ul .hide{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+     .hide ul li   {
+        display: none;
+    }
+    .hide:hover ul li   {
+        display: block;
+    }
+    .nav ul li .small_screen_hide{
+        display: none;
+    }
+}
+.nav ul li ul li {
+    float: none;
+}
+.nav ul li ul li  a {
+    display: block;
+}
+body    {
+    font-size: 22px;
+    background: linear-gradient(white, green);
+}
+.btn{
+    width: 120px;
+    background: blue;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    cursor: pointer;
+}
+.btn:active {
+    transform: translateY(4px);
+}
+input[type*='text'] {
+    width: 250px;
+    height: 20px;
+}
+input[type*='email'] {
+    width: 250px;
+    height: 20px;
+}
