@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="Quiz app">
+        <link rel="stylesheet" href="quiz.css">
+        <title>Quiz App</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to the Quiz App</h1>
+        </header>
+        <main>
+            <h3 style="color: red;">Answer each question before you submit your exam for checking...</h3>
+            <form name="question" id="quiz">
+                <div id="1">
+                    <p><strong>1</strong>: What is CPU?</p>
+                    <input type="radio" id="q1a1" name="question1" value="Central Processing Unit">
+                    <label for="q1a1" id="a1">Central Processing Unit</label><br>
+                    <input type="radio" id="q1a2" name="question1" value="Cooling Processor Unit">
+                    <label for="q1a2" id="a2">Cooling Processor Unit</label><br>
+                    <input type="radio" id="q1a3" name="question1" value="Central Packing Unit">
+                    <label for="q1a3" id="a3">Central Packing Unit</label><br>
+                    <input type="radio" id="q1a4" name="question1" value="Central Process Unit">
+                    <label for="q1a4" id="a4">Central Process Unit</label><br><br>
+                </div>
+                <div id="2">
+                    <p><strong>2</strong>: Which of the following is not a list method in python?</p>
+                    <input type="radio" id="q2a1" name="question2" value="Extend">
+                    <label for="q2a1" id="question2a1">Extend</label><br>
+                    <input type="radio" id="q2a2" name="question2" value="Union">
+                    <label for="q2a2" id="question2a2">Union</label><br>
+                    <input type="radio" id="q2a3" name="question2" value="sort">
+                    <label for="q2a3" id="question2a3">sort</label><br>
+                    <input type="radio" id="q2a4" name="question2" value="reverse">
+                    <label for="q2a4" id="question2a4">reverse</label><br><br>
+                </div>
+                <div id="3">
+                    <p><strong>3</strong>: Which of the following is not a set method in python?</p>
+                    <input type="radio" id="q3a1" name="question3" value="add">
+                    <label for="q3a1" id="question3a1">add</label><br>
+                    <input type="radio" id="q3a2" name="question3" value="delete">
+                    <label for="q3a2" id="question3a2">delete</label><br>
+                    <input type="radio" id="q3a3" name="question3" value="clear">
+                    <label for="q3a3" id="question3a3">clear</label><br>
+                    <input type="radio" id="q3a4" name="question3" value="setdiff1d">
+                    <label for="q3a4" id="question3a4">setdiff1d</label><br><br>
+                </div>
+                <div id="4">
+                    <p><strong>4</strong>: Which of the following is not a data type in python?</p>
+                    <input type="radio" id="q4a1" name="question4" value="Float">
+                    <label for="q4a1" id="question4a1">Float</label><br>
+                    <input type="radio" id="q4a2" name="question4" value="Number">
+                    <label for="q4a2" id="question4a2">Number</label><br>
+                    <input type="radio" id="q4a3" name="question4" value="Integer">
+                    <label for="q4a3" id="question4a3">Integer</label><br>
+                    <input type="radio" id="q4a4" name="question4" value="Set">
+                    <label for="q4a4" id="question4a4">Set</label><br><br>
+                </div>
+                <div id="5">
+                    <p><strong>5</strong>: Which of the following is not a linear data type?</p>
+                    <input type="radio" id="q5a1" name="question5" value="Hash maps">
+                    <label for="q5a1" id="question5a1">Hash maps</label><br>
+                    <input type="radio" id="q5a2" name="question5" value="Linked lists">
+                    <label for="q5a2" id="question5a2">Linked lists</label><br>
+                    <input type="radio" id="q5a3" name="question5" value="stack">
+                    <label for="q5a3" id="question5a3">stack</label><br>
+                    <input type="radio" id="q5a4" name="question5" value="queues">
+                    <label for="q5a4" id="question5a4">queues</label><br><br>
+                </div>
+                <h3 style="color: blue;" id="result"></h3>
+                <input type="button" class="btn" id="btn" onclick="validate()" value="Submit">
+                <input type="button" class="btn" id="btn2"
+                       onclick="refresh()" value="Retry" style="background: blue; width: 100px;">
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="quiz.js"></script>
+    </body>
+</html>
