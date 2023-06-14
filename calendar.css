@@ -1,0 +1,26 @@
+.container  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 40px;
+    background: linear-gradient(to right, white 50%, red 50%);
+}
+.main-container {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+body    {
+    background-color: violet;
+}
+.container:hover    {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
