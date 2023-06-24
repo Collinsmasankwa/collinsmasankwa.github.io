@@ -45,6 +45,7 @@ select  {
     align-items: center;
     font-size: 18px;
     padding: 20px;
+    padding-bottom: 20px;
 }
 .btn:active {
     transform: translateY(4px);
