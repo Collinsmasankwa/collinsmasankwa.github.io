@@ -64,4 +64,7 @@ select  {
     select{
         width: 200px;
     }
+    .btn{
+        padding-bottom: 15px;
+    }
 }
