@@ -1,0 +1,67 @@
+body    {
+    background-color: blueviolet;
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 100vh;
+}
+.flex-container textarea {
+    width: 600px;
+    height: 200px;
+    border: 0;
+    outline: o;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+textarea::placeholder   {
+    font-size: 19px;
+    color: black;
+}
+select  {
+    width: 500px;
+    height: 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+   /* appearance: none;*/
+}
+.btn    {
+    width: 100px;
+    height: 20px;
+    color: white;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 15px;
+}
+.btn:active {
+    transform: translateY(4px);
+}
+.btn img    {
+    width: 20px;
+    height: 20px;
+}
+.flex-container h1 span {
+    color: orange;
+    text-decoration: underline white;
+}
+@media screen and (max-width: 768px){
+    .flex-container textarea{
+        width: 400px;
+    }
+    select{
+        width: 100%;
+    }
+}
