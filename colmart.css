@@ -1,0 +1,179 @@
+*   {
+    box-sizing: border-box;
+}
+header h1   {
+    color: red;
+}
+body    {
+    font-family: Arial, verdana, sans-serif;
+    font-size: 19px;
+}
+.intro-container    {
+    position: relative;
+    background: linear-gradient(to right, orange, yellow, white);
+    margin-bottom: 20px;
+    padding-top: 40px;
+    z-index: 1;
+}
+.intro  {
+    text-align: center;
+    padding-top: 30px;
+}
+.intro h4{
+    font-size: 30px;
+    position: relative;
+}
+.menu   {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 3;
+}
+.menu img{
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+ul  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.intro-container nav ul{
+    position: absolute;
+    top: 10px;
+    right: -250px;
+    height: 100vh;
+    /*background: rgba(0, 210, 0, 1);   dynamically added by javascript        */
+    width: 250px;
+    transition: 1s;
+    z-index: 2;
+    display: none;
+}
+.intro-container nav ul li  {
+    margin: 30px;
+    width: 100%;
+}
+.intro-container nav ul li a    {
+    text-decoration: none;
+}
+.btn{
+    width: 120px;
+    background: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.btn:active{
+    transform: translateY(4px);
+}
+.intro h4::after{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    content: '';
+    width: 40px;
+    transform: translateX(-45px) rotate(-20deg);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 2px;
+    height: 20px;
+    background: linear-gradient(blueviolet, green);
+}
+
+@media only screen and (max-width: 768px){
+    .intro-container{
+        width: 100%;
+    }
+    header h1{
+        font-size: 18px;
+    }
+    .intro-container nav ul{
+        width: 200px;
+    }
+}
+.grid-container{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    position: relative;
+}
+.desc{
+    position; absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.grid-container img {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+}
+.grid  {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+@media only screen and (max-width: 768px){
+    .grid-container{
+        grid-template-columns: auto;
+    }
+    .grid-container img {
+        width: 250px;
+        height: 100px;
+    }
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+.p{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.p:hover{
+    transform: translateY(-7px);
+    background: blue;
+    color: white;
+}
+.flex-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+@media only screen and (max-width: 768px){
+    .flex-container{
+        flex-direction: column;
+    }
+}
+input[type*='text']{
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+input[type*='email']{
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+@media only screen and (max-width: 768px){
+    input[type*='text']{
+        width: 200px;
+    }
+    input[type*='email']{
+        width: 200px;
+    }
+}
