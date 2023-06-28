@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="online retail">
+        <link rel="stylesheet" href="colmart.css">
+        <title>colMart</title>
+    </head>
+    <body>
+        <header>
+            <h1>colMart Incorporation</h1>
+        </header>
+        <main>
+            <form name="signin">
+                <div style="display: flex; justify-content: center;">
+                    <div class="flex2">
+                        <h3 style="text-align: center;">Login</h3>
+                        <div>
+                            <label for="username">Username</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" id="username" name="username"><br><br>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="password" id="password" name="password"><br><br>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button type="button" class="btn" onclick="login()">Login</button>
+                        </div>
+                        <p style="text-align: center;">Don't have an account?
+                            <a href="colmartSignup.html">Signup</a></p>
+                    </div>
+                </div>
+            </form>
+
+            <script>
+                function login(){
+                  let userName = document.forms['signin']['username'].value;
+                  let password = document.forms['signin']['password'].value;
+
+                  if (localStorage.getItem('username') === userName &&
+                   localStorage.getItem('password') === password){
+                     alert('logged in successfully');
+                     window.location.assign('colmart.html');
+                   }
+                   else{
+                     alert('Invalid inputs');
+                   }
+                }
+
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>

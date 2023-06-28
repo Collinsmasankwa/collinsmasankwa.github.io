@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="online retail">
+        <link rel="stylesheet" href="colmart.css">
+        <title>colMart</title>
+    </head>
+    <body>
+        <header>
+            <h1>colMart Incorporation</h1>
+            <p style="color: red;">DISCLAIMER</p>
+            <p style="color: black;">In this page, please don't use any
+                <strong style="color: red;">real</strong> password or username.<br>
+                This is a demo signup page and your data will be stored in your own browser.<br>
+            </p>
+        </header>
+        <main>
+            <form name="signup">
+                <div style="display: flex; justify-content: center;">
+                    <div class="flex2">
+                        <h3 style="text-align: center;">Signup</h3>
+                        <div>
+                            <label for="username">Username</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" id="username" name="username"><br><br>
+                        </div>
+                        <div>
+                            <label for="password">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="password" id="password" name="password"><br><br>
+                        </div>
+                        <div>
+                            <label for="password2">Repeat-password</label>
+                            <input type="password" id="password2" name="password2" style="width: 275px;"><br><br>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button type="button" class="btn" id="btn" onclick="create()">Signup</button>
+                        </div>
+                        <p style="text-align: center;">Already have an account?
+                            <a href="colmartSignin.html">Login</a></p>
+                    </div>
+                </div>
+            </form>
+            <script>
+                function create(){
+                  let userName = document.forms['signup']['username'].value;
+                  let password = document.forms['signup']['password'].value;
+                  let password2 = document.forms['signup']['password2'].value;
+
+                  if ((password === '' || password === null )
+                   || (userName === '' || userName === null) || (password2 === '' || password2 === null)){
+                    alert('empty username or password fields');
+                  }
+                  else{
+                    if (password === password2){
+                      window.localStorage.setItem('username', userName);
+                      window.localStorage.setItem('password', password);
+                      alert('user created successfully');
+                      window.location.assign('colmartSignin.html');
+                    }
+                    else{
+                      alert('password does not a match!');
+                    }
+                  }
+                }
+
+            </script>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
