@@ -10,7 +10,11 @@
     </head>
     <body>
         <header>
-            <h1>colMart Incorporation</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>colMart Incorporation</h1>
+                <button class="btn2" style="background: teal;" id="logout" onclick="logout()">Logout</button>
+            </div>
+            <h3 id="user"></h3>
         </header>
         <main>
             <section class="intro-container" id="home">
@@ -27,8 +31,8 @@
                 <div class="intro">
                     <h4 id="intro">colMart</h4>
                     <p>Welcome to colMart where Quality matters. You order we deliver.</p>
-                    <button class="btn">Signup</button>
-                    <button class="btn">Login</button>
+                    <a href="colmartSignup.html"><button class="btn">Signup</button></a>
+                    <a href="colmartSignin.html"><button class="btn">Login</button></a>
                 </div>
                 <div class="menu">
                     <img src="menu.png" id="menu">
