@@ -12,3 +12,21 @@ menu.onclick = function (){
     nav.style.display = 'none';
   }
 }
+
+const user = localStorage.getItem('username');
+
+if (user){
+  document.getElementById('user').innerHTML = `Hello @${user}`;
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('logout').style.display = 'block';
+}
+else{
+  document.getElementById('home').style.display = 'block';
+  document.getElementById('logout').style.display = 'none';
+}
+
+function logout(){
+  document.getElementById('home').style.display = 'block';
+  document.getElementById('logout').style.display = 'none';
+  document.getElementById('user').innerHTML = '';
+}
