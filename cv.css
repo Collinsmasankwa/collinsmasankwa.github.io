@@ -1,0 +1,164 @@
+*   {
+    box-sizing: border-box;
+    font-size: 18px;
+}
+ul  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+nav ul li   {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px;
+    color: white;
+}
+nav ul li a:hover{
+    background-color: purple;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.div1   {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: blueviolet;
+    color: white;
+}
+.p1     {
+    position: absolute;
+    left: 15px;
+    top: 0;
+}
+
+#section2{
+    margin-top: 30px;
+    background-image: linear-gradient(to bottom, white, lightblue, gray);
+}
+#section2 p{
+    font-size: 22px;
+}
+.name   {
+    color: blueviolet;
+    font-size: 22px;
+}
+.p2 {
+    text-align: center;
+    position: relative;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#section3   {
+    margin-top: 30px;
+    background-image: linear-gradient(to bottom, white, gray, lightblue, pink, magenta);
+}
+
+#section4   {
+    margin-top: 40px;
+    background-image: linear-gradient(to bottom, white, pink, white, magenta, gray);
+}
+#section4 ul {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 10px;
+    margin: auto;
+    background: none;
+}
+
+#section5   {
+    margin-top: 50px;
+    background-image: linear-gradient(to bottom, white, gray);
+}
+
+#section6   {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to bottom, white, pink);
+}
+
+
+#section7   {
+    margin-top: 50px;
+}
+
+
+
+#section5 ul {
+    list-style-type: square;
+    list-style-position: inside;
+    padding: 10px;
+    margin: auto;
+    background: none;
+}
+
+
+.flex4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: -40px;
+}
+
+.grid-container  {
+   display: grid;
+   grid-template-columns: auto auto;
+   gap: 5px;
+}
+
+.grid-container ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px;
+    margin: auto;
+    background: none;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        font-size: 18px;
+    }
+    ul{
+        padding: 10px 0;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .p2{
+        font-size: 18px;
+    }
+    .name{
+        text-align: center;
+    }
+    .first{
+        flex-direction: column;
+    }
+}
