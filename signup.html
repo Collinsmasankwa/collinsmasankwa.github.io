@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="HTML practice">
+        <title>Collins Webpage</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+            input[type*='password']{
+                width: 300px;
+                position: relative;
+                padding-right: 32px;
+                padding-bottom: 5px;
+            }
+            input[type*='text']{
+                width: 300px;
+            }
+            input[type*='email']{
+                width: 300px;
+            }
+            .pwd{
+                position: relative;
+                width: 300px;
+            }
+            .pwd img{
+                width: 26px;
+                height: 26px;
+                position: relative;
+                left: 270px;
+                top: -25px;
+                cursor: pointer;
+            }
+            .btn{
+                width: 100px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 4px;
+            }
+            .btn:active{
+                transform: translateY(4px);
+            }
+            .flex{
+                display: flex;
+                width: 350px;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: nowrap;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            .main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            .nav ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                background: purple;
+            }
+            .nav ul li{
+                display: inline-block;
+                padding: 10px;
+                position: relative;
+            }
+            .nav ul li a{
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+            }
+            .nav ul li a:hover{
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: magenta;
+            }
+            .nav ul li ul{
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+            .nav ul li:hover ul{
+                display: inline-block;
+            }
+            @media only screen and (max-width: 768px){
+                .flex{
+                    width: 300px;
+                }
+                input[type*='text']{
+                    width: 250px;
+                }
+                input[type*='email']{
+                    width: 250px;
+                }
+                input[type*='password']{
+                    width: 250px;
+                }
+                .pwd img{
+                    left: -30px;
+                    top: 10px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="">HOME</a>&nbsp;&nbsp;<span style="font-size: 22px; font-weight: bold;">|</span></li>
+                    <li><a href="">ABOUT</a>&nbsp;&nbsp;<span style="font-size: 22px; font-weight: bold;">|</span></li>
+                    <li><a href="">CONTACT</a>&nbsp;&nbsp;<span style="font-size: 22px; font-weight: bold;">|</span></li>
+                    <li><a href="">CAREERS&nbsp;&nbsp;</a><span style="font-size: 22px; font-weight: bold;">|</span>
+                    <ul>
+                        <li><a href="">FRONTEND</a></li>
+                        <li><a href="">BACKEND</a></li>
+                        <li><a href="">FULLSTACK</a></li>
+                        <li><a href="">UX DESIGN</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="">FAQS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form>
+                <div class="main">
+                    <div class="flex">
+                        <h2 style="text-align: center;">Signup</h2>
+                        <div>
+                            <label for="firstname">FirstName</label><br>
+                            <input type="text" id="firstname"><br><br>
+                        </div>
+                        <div>
+                            <label for="lastname">LastName</label><br>
+                            <input type="text" id="lastname"><br><br>
+                        </div>
+                        <div>
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email"><br><br>
+                        </div>
+                        <div class="pwd">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                            <img src="hide.png" id="image">
+                        </div>
+                        <div class="pwd">
+                            <label for="password2">Confirm password</label>
+                            <input type="password" id="password2">
+                            <img src="hide.png" id="image2">
+                        </div><br>
+                        <button class="btn" type="button" id="btn">Signup</button>
+                    </div>
+                </div>
+            </form>
+            <p style="text-align: center;">&copy; Collins Masankwa 2023</p>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            let pwd1 = document.getElementById('password');
+            let pwd2 = document.getElementById('password2');
+            let img1 = document.getElementById('image');
+            let img2 = document.getElementById('image2');
+
+            img1.onclick = ()=>{
+              if (pwd1.type == 'password'){
+                pwd1.type = 'text';
+                img1.src = 'eye.png';
+              }
+              else{
+                pwd1.type = 'password';
+                img1.src = 'hide.png';
+              }
+            };
+
+            img2.onclick = ()=>{
+              if (pwd2.type == 'password'){
+                pwd2.type = 'text';
+                img2.src = 'eye.png';
+              }
+              else{
+                pwd2.type = 'password';
+                img2.src = 'hide.png';
+              }
+            };
+        </script>
+    </body>
+</html>
