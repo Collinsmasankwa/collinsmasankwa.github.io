@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="portfolio">
+        <title>collins Webpage</title>
+        <style>
+            .flex   {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .flex div nav ul    {
+                list-style-type: none;
+            }
+            .flex div nav ul li {
+                display: inline-block;
+            }
+
+            .flex div nav ul li a   {
+                text-decoration: none;
+                padding: 8px;
+                font-size: 18px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+
+            .flex-container {
+                display: flex;
+                justify-content: flex-start;
+                position: relative;
+                margin-left: 20px;
+            }
+            .flex-container span    {
+                font-size: 50px;
+            }
+            .flex-container .span1   {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .flex-container .span2   {
+                position: absolute;
+                left: 14px;
+                top: 10px;
+            }
+
+            #menu   {
+                position: relative;
+            }
+            #menu img{
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+            }
+
+
+            #menu ul #a  {
+                display: none;
+            }
+            #menu ul #b  {
+                display: none;
+            }
+
+            #menu ul #c  {
+                display: none;
+            }
+
+            #menu ul #d  {
+                display: none;
+            }
+
+            #menu ul li   {
+                display: block;
+                padding: 10px;
+            }
+
+            .section1{
+                margin-top: 50px;
+                position: absolute;
+                left: 20px;
+                bottom: 100px;
+
+            }
+            body    {
+                background-color: #2ec5d9;
+            }
+            .btn    {
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .btn:hover{
+                background-color: green;
+                color: white;
+            }
+            .name   {
+                /*-webkit-text-stroke: 1px black;*/
+                color: transparent;
+                font-size: 40px;
+                background-image: linear-gradient(to right, white, white);
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                background-position: -800px 0;
+                animation: animate 3s .1s infinite normal backwards ease-in-out;
+            }
+            @keyframes animate{
+                100%{background-position: 0 0;}
+            }
+            #section2{
+                position: absolute;
+                bottom: -80px;
+            }
+            #section3{
+                position: absolute;
+                bottom: -160px;
+                text-align: center;
+            }
+
+            @media screen and (min-width: 768px){
+                #menu{
+                    display: none;
+                }
+                .section1{
+                    font-size: 22px;
+                    bottom: 50px;
+                }
+            }
+            @media screen and (max-width: 768px){
+                #about, #more, #faqs, #contact{
+                    display: none;
+                }
+                .section1{
+                    bottom: 0;
+                }
+                .flex div nav ul li a{
+                    background: none;
+                    color: blue;
+                    border: 0;
+                }
+                .name{
+                    font-size: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="flex">
+                <div class="flex-container">
+                    <span class="span1">C</span>
+                    <span class="span2">M</span>
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li id="about"><a>ABOUT</a></li>
+                            <li id="more"><a>MORE</a></li>
+                            <li id="faqs"><a>FAQS</a></li>
+                            <li id="contact"><a href="">CONTACT</a></li>
+                            <li id="menu">
+                                <ul>
+                                    <li class="menu"><img src="menu.png" style="width: 32px; height: 32px;"></li>
+                                    <li id="a"><a>ABOUT</a></li>
+                                    <li id="b"><a>MORE</a></li>
+                                    <li id="c"><a>FAQS</a></li>
+                                    <li id="d"><a>CONTACT</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section1">
+                <div>
+                    <p id="hi">Hi there!</p>
+                    <p id="am">Am</p>
+                    <p class="name">COLLINS MOKUA</p>
+                    <p>In need of a modern responsive website? Then you are at the right place.</p><br>
+                    <span class="btn">Contact Me</span>
+                    <span class="btn">View my portfolio</span><br><br>
+                    <span style="font-variant: small-caps;">View my portfolio to learn more about me.</span>
+                    <br>
+                </div>
+            </section>
+            <section id="section2">
+                <p>My social media handles:</p>
+                    <img src="facebook.png" alt="fb"
+                         style="width: 32px; height: 32px; cursor: pointer;">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="instagram.png" alt="instagram"
+                         style="width: 32px; height: 32px; cursor: pointer;">
+            </section>
+            <section id="section3">
+                <p>&copy;Collins Mokua 2023</p>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+            let menu = document.querySelector('.menu');
+            let about = document.querySelector('#a');
+            let more = document.querySelector('#b');
+            let faqs = document.querySelector('#c');
+            let contact = document.querySelector('#d');
+            menu.addEventListener('click', ()=>{
+              if (getComputedStyle(about).display == 'none' && getComputedStyle(more).display == 'none'
+              && getComputedStyle(faqs).display == 'none' && getComputedStyle(contact).display == 'none'){
+                about.style.display = 'block';
+                more.style.display = 'block';
+                faqs.style.display = 'block';
+                contact.style.display = 'block';
+                document.querySelector('#hi').style.display = 'none';
+                document.querySelector('#am').style.display = 'none';
+              }
+              else{
+                about.style.display = 'none';
+                more.style.display = 'none';
+                faqs.style.display = 'none';
+                contact.style.display = 'none';
+                document.querySelector('#hi').style.display = 'block';
+                document.querySelector('#am').style.display = 'block';
+              }
+            });
+        </script>
+    </body>
+</html>
