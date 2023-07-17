@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="Collins Mokua">
+      <meta name="description" content="Text to speech program">
+      <title>TextToSpeechProgram</title>
+      <style>
+          body  {
+              background-color: blueviolet;
+              color: white;
+              font-size: 18px;
+          }
+          .h1   {
+              font-variant: small-caps;
+              text-align: center;
+              color: white;
+              text-decoration: underline 2px white;
+          }
+          textarea  {
+               width: 500px;
+               height: 400px;
+               resize: none;
+               border: 1px solid black;
+               border-radius: 10px;
+               outline: none;
+               font-size: 18px;
+          }
+          textarea::placeholder     {
+                font-size: 22px;
+                color: black;
+                font-family: Garamond, serif;
+          }
+          textarea::-webkit-scrollbar   {
+               display: none;
+          }
+          select    {
+                outline: none;
+                width: 240px;
+                height: 25px;
+                border: 1px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+          }
+          *     {
+                box-sizing: border-box;
+          }
+          .btn  {
+                width: 100px;
+                background: black;
+                color: white;
+                padding: 2px;
+                font-size: 18px;
+                border-radius: 10px;
+                border: 1px solid black;
+                cursor: pointer;
+                height: 25px;
+          }
+          .btn:active   {
+                transform: translateY(4px);
+          }
+          @media screen and (max-width: 768px){
+              .h1{
+                  font-size: 23px;
+              }
+              textarea  {
+                  width: 290px;
+                  height: 330px;
+              }
+              select {
+                  width: 60%;
+              }
+          }
+      </style>
+  </head>
+  <body>
+      <header>
+          <h1 class="h1">Text to speech <span style="color: pink;">program</span></h1>
+          <p>The program is designed to convert your text into speech.
+            Try it below and happy interaction with it!</p>
+      </header>
+      <main>
+          <!--
+          <div>
+              <input type="file" id="file">
+          </div>
+          -->
+          <div style="text-align: center;">
+              <textarea placeholder="Write anything here..." id="textarea"></textarea><br>
+              <select id="select"></select>
+              <button class="btn" type="button" id="button">Listen</button>
+          </div>
+          <div style="text-align: center;"><p>&copy;Collins Masankwa</p></div>
+          <p id="p"></p>
+      </main>
+      <footer>
+
+      </footer>
+      <script>
+          const utterance = new SpeechSynthesisUtterance();
+          let voices = [];
+          let isSpeaking = false;
+          window.speechSynthesis.onvoiceschanged = function(){
+            voices = window.speechSynthesis.getVoices();
+            utterance.voice = voices[0];    // default voice
+            // loop through all voices
+            voices.forEach((voice)=>{
+              let option = document.createElement('option');
+              option.textContent = voice.name;
+              document.querySelector('#select').appendChild(option);
+            });
+          };
+
+          document.querySelector('#select').addEventListener('change', ()=>{
+            let selectedVoiceName = document.querySelector('#select').value;
+            let selectedVoice = voices.find((voice)=>{return selectedVoiceName === voice.name});
+            if (selectedVoice){
+              utterance.voice = selectedVoice;
+            }
+          });
+
+          window.addEventListener('beforeunload', ()=>{
+            if (isSpeaking){
+              window.speechSynthesis.cancel();
+            }
+            textarea.textContent = '';
+          });
+
+          document.querySelector('#button').addEventListener('click', ()=>{
+             if (document.querySelector('textarea').value == ''){
+                // if no words then do this...
+                utterance.text = 'Please write some words in the textarea. Thank you!';
+                window.speechSynthesis.speak(utterance);
+                isSpeaking = true;
+             }
+             utterance.text = document.querySelector('textarea').value;
+             window.speechSynthesis.speak(utterance);
+             isSpeaking = true;
+          });
+
+          /*
+          const uploadedFile = document.querySelector('#file');
+          const preview = document.querySelector('#p');
+
+          uploadedFile.addEventListener('change', ()=>{
+            const File = new FileReader();
+            File.readAsText(uploadedFile.files[0]);
+
+            File.addEventListener('load', ()=>{
+              document.querySelector('#textarea').innerHTML = File.result;
+            });
+          });
+          */
+
+      </script>
+  </body>
+</html>
