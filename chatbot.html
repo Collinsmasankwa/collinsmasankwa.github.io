@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="chatBot">
+        <title>Collins Chatbot</title>
+        <link href="chatbot.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <div style="display: flex; justify-content: center;">
+                <div class="flex-container">
+                    <h1 style="font-variant: small-caps; text-align: center;">Collins ChatBot</h1>
+                    <div class="chat-flex">
+                        <div style="display: flex; justify-content: flex-end;">
+                            <div class="user-message">
+                                <p>To interact with this chat interface, type in any message on the message input
+                                area.<br>Have a nice day.</p>
+                            </div>
+                        </div>
+                        <div class="chatbot-message">
+                            <p>This is a sample response.Try it!</p>
+                        </div>
+                    </div>
+                    <div id="scroll"></div>
+                    <div class="icons">
+                        <textarea placeholder="Message" id="textarea"></textarea>&nbsp;&nbsp;&nbsp;
+                        <img src="send.png" alt="send" style="width: 32px; height: 32px;" id="btn">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+        <script src="chatbot.js"></script>
+    </body>
+</html>
