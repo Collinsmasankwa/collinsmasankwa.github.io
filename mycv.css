@@ -1,0 +1,127 @@
+*   {
+    box-sizing: border-box;
+}
+
+.header-flex-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-flex-container img  {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.smaller-screens-menu-options   {
+    padding: 4px;
+    background: blue;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.smaller-screens-menu-options ul, .larger-screens-menu-options ul    {
+    list-style-type: none;
+}
+
+.smaller-screens-menu-options ul li, .larger-screens-menu-options ul li {
+    margin: 10px;
+}
+
+.smaller-screens-menu-options ul li a, .larger-screens-menu-options ul li a   {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.larger-screens-menu-options ul li {
+    display: inline-block;
+}
+
+
+.larger-screens-menu-options ul li a{
+    background: blue;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+.intro-section  {
+    padding: 3px;
+    background: #cecece;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.experience-section  {
+    padding: 3px;
+    background: #fedaed;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.education-section  {
+    padding: 3px;
+    background: #aeb5e0;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.skills-section  {
+    padding: 3px;
+    background: #deb1de;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.programming-skills-section  {
+    padding: 3px;
+    background: #36ef6f;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+body {
+    font-size: 18px;
+    background: #d3e5ee;
+}
+
+.intro-name     {
+    font-size: 40px;
+    -webkit-text-stroke: 1px black;
+    color: transparent;
+    background: linear-gradient(to right, red, green);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: animate-name 4s infinite backwards normal ease-in-out;
+}
+
+@media (max-width: 768px){
+    .intro-name{
+        font-size: 37px;
+    }
+}
+
+@keyframes animate-name     {
+    100% {background-position: 600px 0;}
+}
+
+@media (max-width: 768px){
+    .larger-screens-menu-options{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .smaller-screens-menu-options{
+        display: none;
+    }
+}
+
+.larger-screens-menu-options{
+    text-align: right;
+}
