@@ -97,7 +97,7 @@ body {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: 0 0;
-    animation: animate-name 4s infinite backwards normal ease-in-out;
+    animation: animate-name 5s infinite backwards normal ease-in-out;
 }
 
 @media (max-width: 768px){
@@ -107,7 +107,7 @@ body {
 }
 
 @keyframes animate-name     {
-    100% {background-position: 1600px 0;}
+    100% {background-position: 1000px 0;}
 }
 
 @media (max-width: 768px){
