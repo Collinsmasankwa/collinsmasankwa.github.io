@@ -107,7 +107,7 @@ body {
 }
 
 @keyframes animate-name     {
-    100% {background-position: 600px 0;}
+    100% {background-position: 1600px 0;}
 }
 
 @media (max-width: 768px){
