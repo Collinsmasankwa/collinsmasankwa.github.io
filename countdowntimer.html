@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="countdown timer">
+        <title>Countdown Timer</title>
+        <link rel="stylesheet" href="countdowntimer.css">
+        <link rel="icon" href="stopwatch.png" type="image/x-icon">
+    </head>
+    <body>
+        <div>
+            <h3>This is a countdown timer app, enter time in minutes
+                and press startTimer button to start the countdown!</h3>
+        </div>
+        <!-- input for getting time in minutes -->
+        <div class="minutes-input-div">
+            <input type="number" min="1" placeholder="Enter time in minutes" id="minutes-input">
+            <button type="button" class="btn" id="start-timer-btn">StartTimer</button>
+        </div>
+        <!-- countdown timer div-->
+        <div class="countdown-timer-main-div">
+            <div class="countdown-timer-child-div">
+                <div id="countdown-hours">HH</div>
+                <div>:</div>
+                <div id="countdown-minutes">MM</div>
+                <div>:</div>
+                <div id="countdown-seconds">SS</div>
+            </div>
+        </div>
+        <script src="countdowntimer.js"></script>
+    </body>
+</html>

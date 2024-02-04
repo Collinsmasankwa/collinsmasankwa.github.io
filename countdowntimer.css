@@ -1,0 +1,60 @@
+*   {
+    box-sizing: border-box;
+}
+
+.btn    {
+    outline: none;
+    border: 1px solid magenta;
+    cursor: pointer;
+    background: magenta;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-size: 18px;
+}
+
+.btn:active     {
+    transform: translateY(4px);
+}
+
+.minutes-input-div  {
+    margin-top: 30px;
+}
+
+.minutes-input-div input[type*='number']    {
+    outline: none;
+    font-size: 18px;
+    border: 1px solid green;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.minutes-input-div input[type*='number']::placeholder{
+    color: black;
+}
+
+@media (max-width: 768px){
+    .minutes-input-div input[type*='number']    {
+        width: 200px;
+    }
+}
+
+.countdown-timer-main-div    {
+    display: flex;
+    justify-content: center;
+}
+
+.countdown-timer-child-div   {
+    display: flex;
+    align-items: center;
+    border: 3px solid blue;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    justify-content: center;
+    font-size: 40px;
+    background: black;
+    color: white;
+}
