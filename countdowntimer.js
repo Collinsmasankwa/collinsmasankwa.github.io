@@ -23,6 +23,7 @@ function startCountDown(){
   let hoursDiv = document.getElementById('countdown-hours');
   let minutesDiv = document.getElementById('countdown-minutes');
   let secondsDiv = document.getElementById('countdown-seconds');
+  const audio = new Audio('alarm.wav')
 
   if (minutesInput.trim().length === 0){
     minutesInput = 1;
@@ -62,6 +63,7 @@ function startCountDown(){
           seconds = 60;
         } else {
           clearInterval(countdownInterval);
+          audio.play();
         }
       } else {
         minutes = checkTime(minutes);
@@ -111,6 +113,7 @@ function startCountDown(){
               hoursDiv.innerHTML = hours;
             } else {
               clearInterval(countdownInterval);
+              audio.play();
             }
           }
         } else {
@@ -159,6 +162,7 @@ function startCountDown(){
               hoursDiv.innerHTML = hours;
             } else {
               clearInterval(countdownInterval);
+              audio.play();
             }
           }
         } else {
