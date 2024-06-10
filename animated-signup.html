@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="xplore app inspired by Instagram">
+        <link rel="stylesheet" href="animated-signup.css">
+        <title>xplore --Signup</title>
+        <link rel="icon" href="animated-logo.png" type="image/x-icon">
+    </head>
+    <body>
+        <!-- main signup div -->
+        <div class="signup-main-div">
+            <div class="signup-child-div">
+                <!-- animation border that follows .signup-child-div::before and after element  -->
+                <h3 class="signup-animated-border"></h3>
+                <!-- signup form -->
+                <form id="signup-form">
+                    <!-- signup header and logo -->
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="animated-logo.png" alt="xplore logo" 
+                            style="width: 40px; height: 40px;">&nbsp;
+                        <h2 class="signup-title">xplore Signup</h2>
+                    </div>
+                    <!-- signup error/info messages section -->
+                    <h3 class="signup-info">Info section</h3>
+                    <!-- animated section for successful user signup -->
+                    <div class="successful-signup-animation-div">
+                        <h3 class="successful-signup-animation-spinner"></h3>
+                        <h3>Wait a moment</h3>
+                    </div>
+                    <!-- cancel info btn -->
+                    <h3 class="signup-cancel-info-btn">X</h3>
+                    <!-- username field -->
+                    <div>
+                        <label for="signup-username">Username</label><br>
+                        <input type="text" id="signup-username" name="signup-username"><br><br>        
+                    </div>
+                    <!-- email field -->
+                    <div>
+                        <label for="signup-email">Email</label><br>
+                        <input type="email" id="signup-email" name="signup-email"><br><br>        
+                    </div>
+                    <!-- password field -->
+                    <div>
+                        <label for="signup-password">Password</label><br>
+                        <input type="password" id="signup-password" name="signup-password"><br><br>        
+                    </div>
+                    <!-- confirm password field -->
+                    <div>
+                        <label for="signup-password2">Confirm Password</label><br>
+                        <input type="password" id="signup-password2" name="signup-password2"><br><br>        
+                    </div>
+                    <!-- signup btn -->
+                    <div style="text-align: center;">
+                        <button class="signup-btn" type="button">Signup</button>
+                    </div><br><br>
+                    <!-- signin btn from signup -->
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <h3>
+                            Already have an account?&nbsp;
+                        </h3>
+                        <h3>
+                            <a href="#" class="signin-btn-from-signup">Login</a>
+                        </h3>
+                    </div>
+                    <!-- powered by -->
+                    <div style="margin: -15px;">
+                        <h3 style="margin-top: -10px; text-align: center;">&copy;Collins Masankwa 2024</h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
