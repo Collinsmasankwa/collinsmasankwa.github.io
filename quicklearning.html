@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Collins Mokua">
+        <meta name="description" content="Quick Learning Platform">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quick Learning App</title>
+        <link rel="stylesheet" href="quicklearning.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="assets/setting.png">
+                <h3 style="color: white;">QuickLearningApp</h3>
+            </div>
+            <!-- nav links for larger screens > 310px -->
+             <nav class="nav-links">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#try-btn">Features</a></li>
+                    <li><a href="#feature5">Pricing</a></li>
+                    <li><a href="#time">Contact</a></li>
+                </ul>
+             </nav>
+             <!-- nav links for smaller screens less than 310px -->
+             <div class="menu">
+                <img src="assets/menu.png" draggable="false">
+                <!-- menu options -->
+                <ul class="smaller-screens-options">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#try-btn" id="features-btn">Features</a></li>
+                    <li><a href="#feature5" id="pricing-btn">Pricing</a></li>
+                    <li><a href="#time" id="contact-btn">Contact</a></li>
+                </ul>
+             </div>
+        </header>
+        <main>
+            <!-- hero section -->
+            <div class="hero-container">
+                <div class="hero-div">
+                    <img src="assets/img4.jpg" draggable="false">
+                    <img src="assets/img3.jpg" draggable="false">
+                    <img src="assets/img2.jpg" draggable="false">
+                    <img src="assets/img1.jpg" draggable="false">
+                </div>
+            </div> 
+
+            <!-- hero description -->
+            <div class="hero-description">
+                <p>Wanna upscale your <span style="color: deeppink;">
+                    programming skills
+                </span>?</p>
+                <p style="color: rgb(17, 0, 255);">Then you are at the right place!</p>
+                <p>At <span style="color: rgb(109, 8, 224);">
+                    QuickLearningApp
+                </span>, we offer a variety of programming courses with practical hands on projects.</p>
+                <p>Master any <span style="color: rgb(254, 4, 216);">
+                    programming language</span> with us, with professionals ready to tutor you at the comfort of your home.</p>
+                <p style="color:rgb(233, 9, 132);">Join us today!</p>
+                <button class="btn" id="try-btn">Try out Now</button>
+            </div>
+
+            <!-- features -->
+             <h3 class="features-header">Features</h3>
+            <div class="features-section">
+                <div class="feature1">
+                    <h3 class="features-section-title">Interactive lessons</h3>
+                    <p>From the best tutors, realtime online classes. Live tutur sessions.</p>
+                </div>
+                <div class="feature2">
+                    <h3 class="features-section-title">Progress tracking</h3>
+                    <p>Realtime progress updates as you keep on learning any language.</p>
+                </div>
+                <div class="feature3">
+                    <h3 class="features-section-title">Flexibility in Learning</h3>
+                    <p>Learn at your own preferred time.</p>    
+                </div>
+                <div class="feature4">
+                    <h3 class="features-section-title">Learner oriented</h3>
+                    <p>Easy and Interactive UI for aiding smooth learning, easy enrollment to any language.</p>
+                </div>
+                <div class="feature5" id="feature5">
+                    <h3 class="features-section-title">Online support available</h3>
+                    <p>For any inquiries, our support team is always ready to assist the learner 24/7.</p>
+                </div>
+            </div>
+
+            <!-- pricing -->
+            <div class="pricing-div">
+                <h3 class="pricing-div-header">Pricing</h3>
+                <table>
+                    <tr>
+                        <th>Tier</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Signup</th>
+                    </tr>
+                    <tr>
+                        <td>Beginner</td>
+                        <td>Beginner friendly courses to give you confidence in programming.</td>
+                        <td>$100 per month</td>
+                        <td>
+                            <button class="btn">Signup</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Intermediate</td>
+                        <td>Learn Intermediate concepts of the desired language.</td>
+                        <td>$150 per month</td>
+                        <td>
+                            <button class="btn">Signup</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Advanced</td>
+                        <td>Learn Advanced concepts of the desired language.</td>
+                        <td>$200 per month</td>
+                        <td>
+                            <button class="btn">Signup</button>
+                        </td>
+                    </tr>
+                </table>
+            </div> 
+            <!-- contact section -->
+            <div style="text-align: center;">
+                <h3>Find us on the email below for any inquiries!</h3>
+                <a href="mailto:quicklearning@gmail.com" class="btn" 
+                style="background-color: magenta; color: white; text-decoration: none;
+                 border-color: magenta;">Email Us</a>
+            </div> 
+        </main>
+        <footer>
+            <div class="footer-icons">
+                <div>
+                    <img src="assets/instagram.png">
+                    <img src="assets/twitter.png">
+                </div>
+                <h3>&copy;QuickLearningApp <span id="time"></span></h3>
+            </div>
+        </footer>
+        <script src="quicklearning.js"></script>
+    </body>
+</html>
