@@ -1,0 +1,107 @@
+*   {
+    box-sizing: border-box;
+}
+
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.product-div {
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 2px orangered, 0 0 4px 2px magenta;
+    margin: 10px;
+}
+
+.product-div img {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.product-details-div {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+.btn {
+    color: orangered;
+    font-size: 1.125em;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid white;
+    background-color: white;
+    box-shadow: 0 0 4px 1px black;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.view-details-link {
+    text-decoration: none;
+    font-size: 1.125em;
+    border-radius: 10px;
+    border: 2px solid blueviolet;
+    padding: 10px;
+    color: blue;
+}
+
+.view-details-link:hover {
+    background-color: black;
+    color: white;
+}
+
+.app-intro {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+}
+
+.dealership-title {
+    white-space: nowrap;
+    color: transparent;
+    background: linear-gradient(to right, black, green, red, blue);
+    background-clip: text;
+    width: 0;
+    overflow: hidden;
+    border-right: 3px solid coral;
+    display: inline;
+    animation: name-animation 4s steps(30, end) .1s infinite normal forwards;
+}
+
+@keyframes name-animation {
+    100% {
+        width: 100%;
+    }
+}
+
+.app-intro img {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px rgb(220, 217, 217);
+    padding: 2px;
+}
+
+.product-title {
+    color: transparent;
+    background: linear-gradient(to right, black, green, red, blue);
+    background-clip: text;
+    font-weight: bold;
+}
